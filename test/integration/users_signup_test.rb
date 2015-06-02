@@ -14,5 +14,6 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
                                password_confirmation: "bar" }
     end
     assert_template 'user/new'
+    assert is_logged_in?
   end
 end
